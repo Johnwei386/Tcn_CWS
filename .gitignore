@@ -1,0 +1,8 @@
+*.pyc
+results/
+results/*
+.idea/
+.idea/*
+datasets/
+datasets/*
+
