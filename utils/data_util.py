@@ -55,6 +55,7 @@ class DataUtil:
             logger.info("Load %d pretrain word embeddings", len(pretrain_embeddings))
             sub_count = 0
             for word, vec in pretrain_embeddings.items():
+                assert type(vec[0]) == np.float32
                 if self.config.is_normalize:
                     word = normalize(word)
                 if word in helper.tok2id:

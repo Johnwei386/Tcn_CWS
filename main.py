@@ -74,7 +74,7 @@ def train(args, config):
 if __name__ == '__main__':
     paser = argparse.ArgumentParser(description='Tuning with temporal Convolutional network for CWS')
     paser.add_argument('--model', choices=['tcn','uni-lstm','bi-lstm'], help='Which model to perform', default='tcn')
-    paser.add_argument('--embedding', help='Path of char Embedding', default='datasets/charVec100d.txt')
+    paser.add_argument('--embedding', help='Path of char Embedding', default='datasets/wordvectors.txt')
     paser.add_argument('--train', help='Dir of train data', default='datasets/nlpcc2016/train')
     paser.add_argument('--dev', help='Dir of evaluation data', default=None)
     paser.add_argument('--test', help='Dir of test data', default='datasets/nlpcc2016/test')
