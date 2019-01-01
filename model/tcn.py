@@ -21,6 +21,7 @@ class TemporalConvnet(NERModel):
     def __init__(self, helper, config, pretrained_embeddings, datautil):
         super(TemporalConvnet, self).__init__(helper, config, datautil)
         self.report = config.is_report
+        self.isDropout = self.config.training
         self.max_length = min(config.max_length, helper.max_length)
         self.pretrained_embeddings = pretrained_embeddings
         self.num_channels = [config.filters_size] * (config.num_layers - 1) + [config.embed_size]
@@ -108,7 +109,7 @@ class TemporalConvnet(NERModel):
             # print(inputs.shape)
             outputs = inputs
             for layer in self.layers:
-                outputs = layer(outputs, training=self.config.training)
+                outputs = layer(outputs, training=self.isDropout)
             preds = self.decoder(outputs)
             # print(preds.shape)
 
@@ -159,6 +160,7 @@ class TemporalConvnet(NERModel):
     def predict_on_batch(self, sess, inputs_batch, mask_batch):
         feed = self.create_feed_dict(inputs_batch=inputs_batch,
                                      mask_batch=mask_batch)
+        self.isDropout = False
         predictions = sess.run(tf.argmax(self.pred, axis=2), feed_dict=feed)
         return predictions
 
@@ -166,6 +168,7 @@ class TemporalConvnet(NERModel):
         feed = self.create_feed_dict(inputs_batch=inputs_batch,
                                      labels_batch=labels_batch,
                                      mask_batch=mask_batch)
+        self.isDropout = True
         _, loss = sess.run([self.train_op, self.loss], feed_dict=feed)
         return loss
 

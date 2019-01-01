@@ -34,7 +34,7 @@ def read_conll(fname):
             assert len(current_toks) == len(current_labels)
             ret.append((current_toks, current_labels))
         # print(len(ret))
-        # print(ret[-1])
+        # print(ret[0])
     return ret
 
 def build_dict(words, max_words=None, offset=0):
