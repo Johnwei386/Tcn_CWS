@@ -55,6 +55,7 @@ def train(args, config):
             logger.info("Each epoch loss value is:\n")
             print(losses)
             logger.info("Bets F1 score is %.4f", best_score)
+            '''
             # illustrate
             x = range(config.n_epochs)
             plt.figure(1)
@@ -67,7 +68,7 @@ def train(args, config):
             plt.xlabel("epoch")
             plt.ylabel("loss")
             #plt.title("Loss")
-            plt.show()
+            plt.show()'''
 
 
 
