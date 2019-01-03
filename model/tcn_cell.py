@@ -55,6 +55,7 @@ class TemporalBlock(tf.keras.layers.Layer):
         x = tf.contrib.layers.layer_norm(x)
         if training:
             x = self.dropout1(x, training=training)
+        #x = self.dropout1(x, training=training)
         # print(x.shape)
         x = tf.pad(x, self.padding)
         # print(x.shape)
@@ -63,6 +64,7 @@ class TemporalBlock(tf.keras.layers.Layer):
         x = tf.contrib.layers.layer_norm(x)
         if training:
             x = self.dropout2(x, training=training)
+        x = self.dropout2(x, training=training)
         #print(x.shape)
         if self.down_sample is not None:
             inputs = self.down_sample(inputs)

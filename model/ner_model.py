@@ -23,6 +23,7 @@ class NERModel(Model):
         self.config = config
         self.datautil = datautil
         self.report = config.is_report
+        self.isDropout = config.training
 
     def preprocess_sequence_data(self, examples):
         """Preprocess sequence data for the model.
@@ -82,6 +83,7 @@ class NERModel(Model):
             if self.report: self.report.log_train_loss(loss)
         print("")
 
+        self.isDropout = False
         logger.info("Evaluating on development data")
         token_cm, entity_scores = self.evaluate(sess, dev_set, dev_set_raw)
         logger.debug("Token-level confusion matrix:\n" + token_cm.as_table())

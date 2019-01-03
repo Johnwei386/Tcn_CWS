@@ -10,12 +10,12 @@ class Config:
     instantiation.
     """
     # Global Hyperparameter  
-    max_length = 300 # longest sequence to parse     
+    max_length = 2000 # longest sequence to parse     
     n_classes = 4 # name entity number
-    dropout = 0.5 # dropout rate  
+    dropout = 0.3 # dropout rate  
     batch_size = 32
-    n_epochs = 50
-    lr = 0.0001 # learn rate
+    n_epochs = 10
+    lr = 0.001 # learn rate
     LABELS = ['B', 'M', 'E', 'S'] # Label Strategy
     UNK = "<unk>" # Unknown character
     is_normalize = False # normalize number
@@ -27,7 +27,7 @@ class Config:
 
     # Tcn model Hyperparameter
     filters_size = 100   
-    num_layers = 4 # number of hidden layers   
+    num_layers = 3 # number of hidden layers   
     kernel_size = 3 # Convolution kernel
 
 
