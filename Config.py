@@ -14,11 +14,11 @@ class Config:
     n_classes = 4 # name entity number
     dropout = 0.3 # dropout rate  
     batch_size = 32
-    n_epochs = 10
+    n_epochs = 30
     lr = 0.001 # learn rate
     LABELS = ['B', 'M', 'E', 'S'] # Label Strategy
     UNK = "<unk>" # Unknown character
-    is_normalize = False # normalize number
+    is_normalize = True # normalize number
     embed_size = 100 # embeddings size
     random_seed = 121 # initialize random seed
     is_report = False  # Report(Config.eval_output)

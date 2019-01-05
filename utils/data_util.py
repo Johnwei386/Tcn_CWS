@@ -54,6 +54,7 @@ class DataUtil:
             pretrain_embeddings = load_word_vector_mapping(embedding_path)
             logger.info("Load %d pretrain word embeddings", len(pretrain_embeddings))
             sub_count = 0
+            word_show = []
             for word, vec in pretrain_embeddings.items():
                 assert type(vec[0]) == np.float32
                 if self.config.is_normalize:
@@ -61,6 +62,8 @@ class DataUtil:
                 if word in helper.tok2id:
                     assert len(vec) == self.config.embed_size
                     embeddings[helper.tok2id[word]] = vec
+                if word not in word_show:
+                    word_show.append(word)
                     sub_count += 1
             logger.info("Substitude %d embedding from pretrain embeddings", sub_count)
 
