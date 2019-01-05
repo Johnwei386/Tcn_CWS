@@ -54,11 +54,19 @@ def build_dict(words, max_words=None, offset=0):
     # enumerate index from 0
     return {word: i + offset for i, (word, _) in enumerate(words)}
 
+def isChinese(uchar):
+    if uchar >= u'\u4e00' and uchar <= u'\u9fa5':
+        return True
+    else:
+        return False
+
 def normalize(word):
     new_word = ""
     for char in word:
         if char.isdigit():
             new_word += '0'
+        elif not isChinese(char):
+            new_word += 'U'
         else:
             new_word += char
     return new_word

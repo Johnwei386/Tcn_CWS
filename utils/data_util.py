@@ -62,9 +62,9 @@ class DataUtil:
                 if word in helper.tok2id:
                     assert len(vec) == self.config.embed_size
                     embeddings[helper.tok2id[word]] = vec
-                if word not in word_show:
-                    word_show.append(word)
-                    sub_count += 1
+                    if word not in word_show:
+                        word_show.append(word)
+                        sub_count += 1
             logger.info("Substitude %d embedding from pretrain embeddings", sub_count)
 
         logger.info("Initialize embeddings done.")
