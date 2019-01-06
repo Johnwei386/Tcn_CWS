@@ -22,12 +22,12 @@ class Config:
     embed_size = 100 # embeddings size
     random_seed = 121 # initialize random seed
     is_report = False  # Report(Config.eval_output)
-    dev_seg_size = 300 # division Verification set size
+    dev_seg_size = 2000 # division Verification set size
 
 
     # Tcn model Hyperparameter
     filters_size = 100   
-    num_layers = 3 # number of hidden layers   
+    num_layers = 4 # number of hidden layers   
     kernel_size = 3 # Convolution kernel
 
 
