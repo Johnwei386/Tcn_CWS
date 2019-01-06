@@ -77,7 +77,7 @@ if __name__ == '__main__':
     paser.add_argument('--model', choices=['tcn','uni-lstm','bi-lstm'], help='Which model to perform', default='tcn')
     paser.add_argument('--embedding', help='Path of char Embedding', default='datasets/wordvectors.txt')
     paser.add_argument('--train', help='Dir of train data', default='datasets/nlpcc2016/train')
-    paser.add_argument('--dev', help='Dir of evaluation data', default='datasets/nlpcc2016/test')
+    paser.add_argument('--dev', help='Dir of evaluation data', default=None)
     paser.add_argument('--test', help='Dir of test data', default='datasets/nlpcc2016/test')
     paser.add_argument('--model_path', help='Dir of saving model parameter', default=None)
     paser.add_argument('--training', help='Whether perform train step', default=True)

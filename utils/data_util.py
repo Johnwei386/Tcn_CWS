@@ -24,7 +24,7 @@ class DataUtil:
         train_raw = read_conll(train_path)
         logger.info("Done. Read %d sentences", len(train_raw))
         logger.info("Loading dev data...")
-        if dev_path is None:
+        if dev_path is None or not os.path.exists(dev_path):
             # samples from train in tail to dev
             dev_seg_size = self.config.dev_seg_size
             dev_raw = train_raw[len(train_raw) - dev_seg_size:]

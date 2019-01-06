@@ -22,7 +22,7 @@ class Config:
     embed_size = 100 # embeddings size
     random_seed = 121 # initialize random seed
     is_report = False  # Report(Config.eval_output)
-    dev_seg_size = 2000 # division Verification set size
+    dev_seg_size = 300 # division Verification set size
 
 
     # Tcn model Hyperparameter
