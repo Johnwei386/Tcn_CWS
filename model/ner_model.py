@@ -110,7 +110,7 @@ class NERModel(Model):
         return self.consolidate_predictions(inputs_raw, inputs, preds)
 
     def fit(self, sess, saver, train_examples_raw, dev_set_raw):
-        best_score = 0.
+        best_score = 0.0
         losses = []
         scores = []
 

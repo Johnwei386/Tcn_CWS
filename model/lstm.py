@@ -7,38 +7,24 @@ import logging
 import tensorflow as tf
 
 from ner_model import NERModel
-from tcn_cell import TemporalBlock
 
 logger = logging.getLogger('ner_model')
 logger.setLevel(logging.DEBUG)
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
-class TemporalConvnet(NERModel):
+class BiLSTM(NERModel):
     """
-    Implements a temporal convnetwork.
+    Implements a Bi-LSTM network.
     """
 
     def __init__(self, helper, config, pretrained_embeddings, datautil):
-        super(TemporalConvnet, self).__init__(helper, config, datautil)
+        super(BiLSTM, self).__init__(helper, config, datautil)
         self.report = config.is_report
+        self.dropout_rate = config.bi_dropout_rate
         self.max_length = min(config.max_length, helper.max_length)
+        self.num_hiddens = self.max_length
+        self.n_classes = config.n_classes
         self.pretrained_embeddings = pretrained_embeddings
-        self.num_channels = [config.filters_size] * (config.num_layers - 1) + [config.embed_size]
-        self.layers = []
-        for i in range(config.num_layers):
-            dilation_size = 2 ** i
-            out_channels = self.num_channels[i]
-            self.layers.append(
-                TemporalBlock(n_outputs=out_channels,
-                              kernel_size=config.kernel_size, 
-                              strides=1, 
-                              dilation_rate=dilation_size, 
-                              dropout=config.dropout,
-                              name="tblock_{}".format(i))
-            )
-        self.decoder = tf.layers.Dense(config.n_classes,
-                                       activation=None,
-                                       kernel_initializer=tf.contrib.layers.xavier_initializer())
 
         # Defining placeholders.
         self.transition_params = None
@@ -109,15 +95,26 @@ class TemporalConvnet(NERModel):
             pred: tf.Tensor of shape (batch_size, max_length, n_classes)
         """
         inputs = self.add_embedding()
-        with tf.variable_scope("TCN"):
-            # print(inputs.shape)
-            outputs = inputs
-            for layer in self.layers:
-                outputs = layer(outputs, training=self.isDropout)
-            preds = self.decoder(outputs)
+        fwcell = tf.nn.rnn_cell.BasicLSTMCell(self.num_hiddens, forget_bias=1.0)
+        bwcell = tf.nn.rnn_cell.BasicLSTMCell(self.num_hiddens, forget_bias=1.0)
+
+        with tf.variable_scope('Decode'):
+            W = tf.get_variable('W', (self.num_hiddens * 2, self.n_classes), initializer=tf.contrib.layers.xavier_initializer())
+            b = tf.get_variable('b', (self.n_classes), initializer=tf.constant_initializer(0))
+        with tf.variable_scope("BiLSTM"):
+            (forward_output, backward_output), _ = tf.nn.bidirectional_dynamic_rnn(
+                                                                    fwcell, 
+                                                                    bwcell, 
+                                                                    inputs,
+                                                                    dtype=tf.float32)
+            outputs = tf.concat(values=[forward_output, backward_output], axis=2)
+            outputs = tf.nn.dropout(outputs, self.dropout_rate)
+            outputs = tf.reshape(outputs, [-1, 2*self.num_hiddens])
+            outputs = tf.matmul(outputs, W) + b
+            preds = tf.reshape(outputs, [-1, self.max_length, self.n_classes])
             # print(preds.shape)
 
-        assert preds.get_shape().as_list() == [None, self.max_length, self.config.n_classes], "predictions are not of the right shape. Expected {}, got {}".format([None, self.max_length, self.config.n_classes], preds.get_shape().as_list())
+        assert preds.get_shape().as_list() == [None, self.max_length, self.n_classes], "predictions are not of the right shape. Expected {}, got {}".format([None, self.max_length, self.config.n_classes], preds.get_shape().as_list())
         # preds = tf.reshape(preds, shape=[-1, self.max_length, self.config.n_classes])
         return preds
 
@@ -134,7 +131,7 @@ class TemporalConvnet(NERModel):
         )'''
         log_likelihood, self.transition_params = tf.contrib.crf.crf_log_likelihood(
             preds, self.labels_placeholder, self.seqlen_placeholser)
-        loss = tf.reduce_mean(-log_likelihood) 
+        loss = tf.reduce_mean(-log_likelihood)
         return loss
 
     def add_training_op(self, loss):
@@ -153,8 +150,8 @@ class TemporalConvnet(NERModel):
     def consolidate_predictions(self, examples_raw, examples, preds):
         """Batch the predictions into groups of sentence length.
         """
-        assert len(examples_raw) == len(examples),'{}:{}'.format(len(examples_raw), len(examples))
-        assert len(examples_raw) == len(preds),'{}:{}'.format(len(examples_raw), len(preds))
+        assert len(examples_raw) == len(examples)
+        assert len(examples_raw) == len(preds)
 
         ret = []
         for i, (sentence, labels) in enumerate(examples_raw):

@@ -10,6 +10,7 @@ from Config import Config
 from utils.data_util import DataUtil
 from model.ner_model import NERModel
 from model.tcn import TemporalConvnet
+from model.lstm import BiLSTM
 
 logger = logging.getLogger('ner_model')
 logger.setLevel(logging.DEBUG)
@@ -38,7 +39,7 @@ def train(args, config):
         elif config.model == 'uni-lstm':
             pass
         elif config.model == 'bi-lstm':
-            pass
+            model = BiLSTM(helper, config, embeddings, datautil)
         else:
             logger.warning("Selected model does not exist!")
             assert False

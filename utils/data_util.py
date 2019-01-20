@@ -136,7 +136,7 @@ class DataUtil:
         """
         ret = []
         zero_vector = 0
-        zero_label = -1
+        zero_label = 3
         for sentence, labels in data:
             len_sentence = len(sentence)
             sentence = np.array(sentence, dtype=np.int32).reshape(len_sentence)
@@ -153,7 +153,7 @@ class DataUtil:
                 mark = [True] * max_length
                 filled_sentence = sentence[:max_length]
                 filled_labels = labels[:max_length]
-            ret.append((filled_sentence, filled_labels, mark))
+            ret.append((filled_sentence, filled_labels, mark, len_sentence))
         return ret
 
 

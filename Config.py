@@ -11,8 +11,7 @@ class Config:
     """
     # Global Hyperparameter  
     max_length = 2000 # longest sequence to parse     
-    n_classes = 4 # name entity number
-    dropout = 0.3 # dropout rate  
+    n_classes = 4 # name entity number  
     batch_size = 32
     n_epochs = 30
     lr = 0.001 # learn rate
@@ -22,13 +21,17 @@ class Config:
     embed_size = 100 # embeddings size
     random_seed = 121 # initialize random seed
     is_report = False  # Report(Config.eval_output)
-    dev_seg_size = 2000 # division Verification set size
+    dev_seg_size = 300 # division Verification set size
 
 
     # Tcn model Hyperparameter
     filters_size = 100   
     num_layers = 4 # number of hidden layers   
     kernel_size = 3 # Convolution kernel
+    dropout = 0.3
+
+    # BiLSTM model Hyperparameter
+    bi_dropout_rate = 0.3
 
 
     def __init__(self, args):
