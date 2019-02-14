@@ -63,6 +63,29 @@ def test_viterbi_decode():
     print(viterbi)
     print(viterbi_score)
 
+def test_alpha_value():
+    with tf.Graph().as_default():
+        tr_matrix = tf.constant([[0.1, 0.6, 0.3],[0.32, 0.18, 0.5],[0.4, 0.23, 0.27]], dtype=tf.float32)
+        alpha0 = tf.constant([[0.2, 0.4, 1.1]], dtype=tf.float32)
+        input1 = tf.constant([[1.32, 0.25, 0.56]], dtype=tf.float32)
+        etr_matrix = tf.expand_dims(tr_matrix, 0)
+        print(tr_matrix.shape)
+        print(etr_matrix.shape)
+        state = tf.expand_dims(alpha0, 2)
+        print(state.shape)
+        tr_scores = state + etr_matrix
+        logsum = tf.reduce_logsumexp(tr_scores, [1])
+        alpha1 = input1 + tf.reduce_logsumexp(tr_scores, [1])
+        init = tf.global_variables_initializer()
+        with tf.Session() as sess:
+            sess.run(init)
+            print(sess.run(input1))
+            print(sess.run(etr_matrix))
+            print(sess.run(state))
+            print(sess.run(tr_scores))
+            print(sess.run(logsum))
+            print(sess.run(alpha1))
+            
 
 def test_tesor_mask():    
     with tf.Graph().as_default():
@@ -122,4 +145,5 @@ def test_tesor_mask():
 
 if __name__ == '__main__':
     #test_tesor_mask()
-    test_viterbi_decode()
+    #test_viterbi_decode()
+    test_alpha_value()
