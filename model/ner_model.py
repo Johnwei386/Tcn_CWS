@@ -51,7 +51,7 @@ class NERModel(Model):
         Args:
             sess: the current TensorFlow session.
             examples: A list of vectorized input/output pairs.
-            examples: A list of the original input/output sequence pairs.
+            examples_raw: A list of the original input/output sequence pairs.
         Returns:
             The F1 score for predicting tokens as named entities.
         """
@@ -98,7 +98,7 @@ class NERModel(Model):
         Reports the output of the model on examples (uses helper to featurize each example).
         """
         if inputs is None:
-            inputs = self.preprocess_sequence_data(self.helper.vectorize(inputs_raw))
+            inputs = self.preprocess_sequence_data(self.helper.vectorize(inputs_raw, self.config))
 
         preds = []
         prog = Progbar(target=1 + int(len(inputs) / self.config.batch_size))

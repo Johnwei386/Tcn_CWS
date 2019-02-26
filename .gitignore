@@ -1,8 +1,5 @@
 *.pyc
-results/
-results/*
 .idea/
-.idea/*
-datasets/
-datasets/*
+datasets/sighan2005/
+results/
 

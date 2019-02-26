@@ -13,7 +13,7 @@ class Config:
     max_length = 2000 # longest sequence to parse     
     n_classes = 4 # name entity number  
     batch_size = 32
-    n_epochs = 30
+    n_epochs = 100
     lr = 0.001 # learn rate
     LABELS = ['B', 'M', 'E', 'S'] # Label Strategy
     UNK = "<unk>" # Unknown character
@@ -21,7 +21,7 @@ class Config:
     embed_size = 100 # embeddings size
     random_seed = 121 # initialize random seed
     is_report = False  # Report(Config.eval_output)
-    dev_seg_size = 300 # division Verification set size
+    dev_seg_size = 2000 # division Verification set size
 
 
     # Tcn model Hyperparameter
@@ -36,7 +36,9 @@ class Config:
 
     def __init__(self, args):
         self.model = args.model
-        self.training = args.training
+        self.training = False
+        if args.training:
+            self.training = True
         if args.model_path is not None:
             # Where to save things.
             self.output_path = args.model_path

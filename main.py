@@ -7,7 +7,8 @@ import time
 import tensorflow as tf
 import matplotlib.pyplot as plt
 from Config import Config
-from utils.data_util import DataUtil
+from utils.data_util import DataUtil, ModelHelper
+from utils.util import read_conll
 from model.ner_model import NERModel
 from model.tcn import TemporalConvnet
 from model.lstm import BiLSTM
@@ -36,9 +37,7 @@ def train(args, config):
         model = None
         if config.model == 'tcn':
             model = TemporalConvnet(helper, config, embeddings, datautil)
-        elif config.model == 'uni-lstm':
-            pass
-        elif config.model == 'bi-lstm':
+        elif config.model == 'bilstm':
             model = BiLSTM(helper, config, embeddings, datautil)
         else:
             logger.warning("Selected model does not exist!")
@@ -55,8 +54,8 @@ def train(args, config):
             print(scores)
             logger.info("Each epoch loss value is:\n")
             print(losses)
-            logger.info("Bets F1 score is %.4f", best_score)
-            '''
+            logger.info("Best F1 score is %.4f", best_score)
+
             # illustrate
             x = range(config.n_epochs)
             plt.figure(1)
@@ -69,25 +68,67 @@ def train(args, config):
             plt.xlabel("epoch")
             plt.ylabel("loss")
             #plt.title("Loss")
-            plt.show()'''
+            plt.show()
 
+def evaluate(args, config):
+    test_dir = args.test
+    datautil = DataUtil(config)
+    helper = ModelHelper.load(args.model_path)
+    test_raw = read_conll(test_dir)
+    test_data = helper.vectorize(test_raw, config)
+    embeddings = datautil.load_embeddings(args.embedding, helper)
+
+    with tf.Graph().as_default():
+        logger.info("Building model...",)
+        start = time.time()
+        model = None
+        if config.model == 'tcn':
+            model = TemporalConvnet(helper, config, embeddings, datautil)
+        elif config.model == 'bilstm':
+            model = BiLSTM(helper, config, embeddings, datautil)
+        else:
+            logger.warning("Selected model does not exist!")
+            assert False
+        assert model is not None,"Model is None, stop excuted!"
+        logger.info("took %.2f seconds", time.time() - start)
+        test_examples = model.preprocess_sequence_data(test_data)
+
+        init = tf.global_variables_initializer()
+        saver = tf.train.Saver()
+        with tf.Session() as sess:
+            sess.run(init)
+            saver.restore(sess, config.model_output)
+            token_cm, entity_scores = model.evaluate(sess, test_examples, test_data)
+            logger.debug("Token-level confusion matrix:\n" + token_cm.as_table())
+            logger.info("Entity level P/R/F1: %.4f/%.4f/%.4f", *entity_scores)
 
 
 if __name__ == '__main__':
     paser = argparse.ArgumentParser(description='Tuning with temporal Convolutional network for CWS')
-    paser.add_argument('--model', choices=['tcn','uni-lstm','bi-lstm'], help='Which model to perform', default='tcn')
-    paser.add_argument('--embedding', help='Path of char Embedding', default='datasets/wordvectors.txt')
+    paser.add_argument('-m', '--model', choices=['tcn', 'bilstm'], help='Which model to perform', default='tcn')
+    paser.add_argument('-e', '--embedding', help='Path of char Embedding', default='datasets/nlpcc2016/wordvectors.txt')
     paser.add_argument('--train', help='Dir of train data', default='datasets/nlpcc2016/train')
     paser.add_argument('--dev', help='Dir of evaluation data', default=None)
     paser.add_argument('--test', help='Dir of test data', default='datasets/nlpcc2016/test')
-    paser.add_argument('--model_path', help='Dir of saving model parameter', default=None)
-    paser.add_argument('--training', help='Whether perform train step', default=True)
+    # the future scheme
+    #paser.add_argument('--model_path', help='Dir of saving model parameters', default='results/tcn/20190223_220045/')
+    # the past scheme
+    #paser.add_argument('--model_path', help='Dir of saving model parameters', default='results/tcn/20190225_172545/')
+    # the Bi-LSTM model
+    #paser.add_argument('--model_path', help='Dir of saving model parameters', default='results/bilstm/20190224_144926/')
+    # training pattern
+    paser.add_argument('--model_path', help='Dir of saving model parameters')
+    paser.add_argument('--training', help='Perform the train operation', default=False)
+    paser.add_argument('--evaluate', help='To varitf the model', default=True)
     args = paser.parse_args()
 
-    training = args.training
+    is_train = args.training
+    is_evaluate = args.evaluate
     config = Config(args)
-    if training:
+    if is_train:
         train(args, config)
+    elif is_evaluate:
+        evaluate(args, config)
     else:
         pass
 

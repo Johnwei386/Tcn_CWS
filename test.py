@@ -43,7 +43,10 @@ def viterbi_decode(score, transition_params):
   for t in range(1, score.shape[0]):
       v = np.expand_dims(trellis[t - 1], 1) + transition_params
       trellis[t] = score[t] + np.max(v, 0)
+      print(v)
       backpointers[t] = np.argmax(v, 0)
+      print(backpointers[t])
+      assert False
 
   viterbi = [np.argmax(trellis[-1])]
   for bp in reversed(backpointers[1:]):
