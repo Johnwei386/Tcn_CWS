@@ -13,7 +13,7 @@ class Config:
     max_length = 2000 # longest sequence to parse     
     n_classes = 4 # name entity number  
     batch_size = 32
-    n_epochs = 100
+    n_epochs = 30
     lr = 0.001 # learn rate
     LABELS = ['B', 'M', 'E', 'S'] # Label Strategy
     UNK = "<unk>" # Unknown character
@@ -37,7 +37,8 @@ class Config:
     def __init__(self, args):
         self.model = args.model
         self.training = False
-        if args.training:
+        scheme = args.o
+        if scheme == 'train':
             self.training = True
         if args.model_path is not None:
             # Where to save things.
