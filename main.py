@@ -110,13 +110,6 @@ if __name__ == '__main__':
     paser.add_argument('--train', help='Dir of train data', default='datasets/nlpcc2016/train')
     paser.add_argument('--dev', help='Dir of evaluation data', default=None)
     paser.add_argument('--test', help='Dir of test data', default='datasets/nlpcc2016/test')
-    # the future scheme
-    #paser.add_argument('-M', help='Dir of saving model parameters', default='results/tcn/20190223_220045/')
-    # the past scheme
-    #paser.add_argument('-M', help='Dir of saving model parameters', default='results/tcn/20190225_172545/')
-    # the Bi-LSTM model
-    #paser.add_argument('-M', help='Dir of saving model parameters', default='results/bilstm/20190224_144926/')
-    # training pattern
     paser.add_argument('--model_path', help='Dir of files for saved model parameters')
     paser.add_argument('-o', choices=['train', 'evaluate'], help='Which opration to Perform for model')
     args = paser.parse_args()

@@ -1,0 +1,1029 @@
+2019-03-03 11:43:14,227:INFO: Building model...
+2019-03-03 11:43:17,335:INFO: took 3.11 seconds
+2019-03-03 11:43:18,571:INFO: Epoch 1 out of 100
+2019-03-03 11:44:31,236:INFO: Evaluating on development data
+2019-03-03 11:44:34,050:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	15234	228  	2250 	1831 
+M    	1871 	184  	736  	187  
+E    	2232 	164  	15248	1899 
+S    	2072 	21   	2448 	15632
+
+2019-03-03 11:44:34,051:INFO: Entity level P/R/F1: 0.71/0.72/0.72
+2019-03-03 11:44:34,051:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:44:34,394:INFO: Epoch 2 out of 100
+2019-03-03 11:45:43,343:INFO: Evaluating on development data
+2019-03-03 11:45:45,990:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	16126	235  	1293 	1889 
+M    	1426 	648  	726  	178  
+E    	1191 	217  	16526	1609 
+S    	1228 	5    	1591 	17349
+
+2019-03-03 11:45:45,990:INFO: Entity level P/R/F1: 0.78/0.81/0.80
+2019-03-03 11:45:45,990:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:45:46,218:INFO: Epoch 3 out of 100
+2019-03-03 11:46:55,496:INFO: Evaluating on development data
+2019-03-03 11:46:58,143:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	16926	335  	1046 	1236 
+M    	1064 	1157 	620  	137  
+E    	967  	285  	17178	1113 
+S    	1343 	13   	1473 	17344
+
+2019-03-03 11:46:58,143:INFO: Entity level P/R/F1: 0.83/0.83/0.83
+2019-03-03 11:46:58,143:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:46:58,373:INFO: Epoch 4 out of 100
+2019-03-03 11:48:07,953:INFO: Evaluating on development data
+2019-03-03 11:48:10,589:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17084	421  	846  	1192 
+M    	881  	1366 	580  	151  
+E    	810  	382  	17277	1074 
+S    	1169 	24   	1272 	17708
+
+2019-03-03 11:48:10,590:INFO: Entity level P/R/F1: 0.84/0.85/0.85
+2019-03-03 11:48:10,590:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:48:10,817:INFO: Epoch 5 out of 100
+2019-03-03 11:49:20,657:INFO: Evaluating on development data
+2019-03-03 11:49:23,299:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17298	275  	777  	1193 
+M    	946  	1304 	594  	134  
+E    	752  	265  	17578	948  
+S    	1078 	15   	1174 	17906
+
+2019-03-03 11:49:23,299:INFO: Entity level P/R/F1: 0.85/0.86/0.86
+2019-03-03 11:49:23,299:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:49:23,527:INFO: Epoch 6 out of 100
+2019-03-03 11:50:32,944:INFO: Evaluating on development data
+2019-03-03 11:50:35,619:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17519	376  	625  	1023 
+M    	721  	1589 	530  	138  
+E    	639  	314  	17724	866  
+S    	1015 	43   	1086 	18029
+
+2019-03-03 11:50:35,619:INFO: Entity level P/R/F1: 0.87/0.87/0.87
+2019-03-03 11:50:35,619:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:50:35,848:INFO: Epoch 7 out of 100
+2019-03-03 11:51:45,589:INFO: Evaluating on development data
+2019-03-03 11:51:48,248:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17623	334  	532  	1054 
+M    	711  	1600 	529  	138  
+E    	559  	285  	17804	895  
+S    	867  	33   	942  	18331
+
+2019-03-03 11:51:48,248:INFO: Entity level P/R/F1: 0.87/0.88/0.88
+2019-03-03 11:51:48,249:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:51:48,473:INFO: Epoch 8 out of 100
+2019-03-03 11:52:57,522:INFO: Evaluating on development data
+2019-03-03 11:53:00,173:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17609	351  	540  	1043 
+M    	639  	1675 	528  	136  
+E    	525  	293  	17757	968  
+S    	805  	31   	820  	18517
+
+2019-03-03 11:53:00,173:INFO: Entity level P/R/F1: 0.88/0.89/0.88
+2019-03-03 11:53:00,174:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:53:00,399:INFO: Epoch 9 out of 100
+2019-03-03 11:54:09,477:INFO: Evaluating on development data
+2019-03-03 11:54:12,117:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17849	399  	512  	783  
+M    	630  	1771 	473  	104  
+E    	517  	358  	18024	644  
+S    	996  	42   	1031 	18104
+
+2019-03-03 11:54:12,118:INFO: Entity level P/R/F1: 0.89/0.89/0.89
+2019-03-03 11:54:12,118:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:54:12,346:INFO: Epoch 10 out of 100
+2019-03-03 11:55:21,732:INFO: Evaluating on development data
+2019-03-03 11:55:24,411:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17711	356  	472  	1004 
+M    	609  	1740 	498  	131  
+E    	484  	316  	17835	908  
+S    	685  	40   	708  	18740
+
+2019-03-03 11:55:24,411:INFO: Entity level P/R/F1: 0.88/0.90/0.89
+2019-03-03 11:55:24,412:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:55:24,639:INFO: Epoch 11 out of 100
+2019-03-03 11:56:33,864:INFO: Evaluating on development data
+2019-03-03 11:56:36,504:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17716	309  	450  	1068 
+M    	622  	1749 	471  	136  
+E    	432  	276  	17894	941  
+S    	660  	25   	665  	18823
+
+2019-03-03 11:56:36,505:INFO: Entity level P/R/F1: 0.89/0.90/0.89
+2019-03-03 11:56:36,505:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:56:36,729:INFO: Epoch 12 out of 100
+2019-03-03 11:57:46,069:INFO: Evaluating on development data
+2019-03-03 11:57:48,713:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17888	348  	422  	885  
+M    	560  	1818 	480  	120  
+E    	425  	304  	18005	809  
+S    	705  	34   	704  	18730
+
+2019-03-03 11:57:48,713:INFO: Entity level P/R/F1: 0.89/0.90/0.90
+2019-03-03 11:57:48,713:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 11:57:48,935:INFO: Epoch 13 out of 100
+2019-03-03 11:58:58,047:INFO: Evaluating on development data
+2019-03-03 11:59:00,696:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17933	407  	410  	793  
+M    	551  	1894 	427  	106  
+E    	416  	390  	18066	671  
+S    	808  	48   	847  	18470
+
+2019-03-03 11:59:00,696:INFO: Entity level P/R/F1: 0.90/0.90/0.90
+2019-03-03 11:59:00,696:INFO: Epoch 14 out of 100
+2019-03-03 12:00:09,632:INFO: Evaluating on development data
+2019-03-03 12:00:12,259:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17979	312  	401  	851  
+M    	571  	1799 	492  	116  
+E    	411  	288  	18071	773  
+S    	695  	31   	712  	18735
+
+2019-03-03 12:00:12,260:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:00:12,260:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:00:12,487:INFO: Epoch 15 out of 100
+2019-03-03 12:01:21,480:INFO: Evaluating on development data
+2019-03-03 12:01:24,133:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17774	383  	374  	1012 
+M    	516  	1895 	430  	137  
+E    	408  	357  	17880	898  
+S    	604  	34   	636  	18899
+
+2019-03-03 12:01:24,133:INFO: Entity level P/R/F1: 0.89/0.90/0.90
+2019-03-03 12:01:24,133:INFO: Epoch 16 out of 100
+2019-03-03 12:02:33,193:INFO: Evaluating on development data
+2019-03-03 12:02:35,847:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17803	284  	400  	1056 
+M    	551  	1805 	466  	156  
+E    	410  	257  	17913	963  
+S    	549  	30   	559  	19035
+
+2019-03-03 12:02:35,848:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:02:35,848:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:02:36,070:INFO: Epoch 17 out of 100
+2019-03-03 12:03:45,005:INFO: Evaluating on development data
+2019-03-03 12:03:47,642:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17920	361  	324  	938  
+M    	486  	1962 	401  	129  
+E    	363  	335  	18026	819  
+S    	584  	30   	616  	18943
+
+2019-03-03 12:03:47,642:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:03:47,642:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:03:47,863:INFO: Epoch 18 out of 100
+2019-03-03 12:04:56,822:INFO: Evaluating on development data
+2019-03-03 12:04:59,462:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17790	365  	381  	1007 
+M    	509  	1882 	452  	135  
+E    	403  	316  	17892	932  
+S    	581  	27   	579  	18986
+
+2019-03-03 12:04:59,462:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:04:59,463:INFO: Epoch 19 out of 100
+2019-03-03 12:06:08,548:INFO: Evaluating on development data
+2019-03-03 12:06:11,180:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18077	334  	356  	776  
+M    	502  	1896 	464  	116  
+E    	398  	305  	18133	707  
+S    	680  	36   	715  	18742
+
+2019-03-03 12:06:11,180:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:06:11,180:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:06:11,408:INFO: Epoch 20 out of 100
+2019-03-03 12:07:20,675:INFO: Evaluating on development data
+2019-03-03 12:07:23,315:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17772	313  	333  	1125 
+M    	526  	1854 	455  	143  
+E    	387  	294  	17861	1001 
+S    	496  	27   	544  	19106
+
+2019-03-03 12:07:23,316:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:07:23,316:INFO: Epoch 21 out of 100
+2019-03-03 12:08:32,369:INFO: Evaluating on development data
+2019-03-03 12:08:35,022:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17955	333  	330  	925  
+M    	484  	1944 	419  	131  
+E    	351  	325  	18024	843  
+S    	547  	33   	576  	19017
+
+2019-03-03 12:08:35,022:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:08:35,022:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:08:35,249:INFO: Epoch 22 out of 100
+2019-03-03 12:09:44,130:INFO: Evaluating on development data
+2019-03-03 12:09:46,777:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17932	276  	327  	1008 
+M    	524  	1871 	446  	137  
+E    	327  	284  	18000	932  
+S    	512  	21   	529  	19111
+
+2019-03-03 12:09:46,777:INFO: Entity level P/R/F1: 0.90/0.92/0.91
+2019-03-03 12:09:46,778:INFO: Epoch 23 out of 100
+2019-03-03 12:10:55,807:INFO: Evaluating on development data
+2019-03-03 12:10:58,458:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17942	332  	331  	938  
+M    	488  	1955 	415  	120  
+E    	376  	321  	18022	824  
+S    	573  	39   	614  	18947
+
+2019-03-03 12:10:58,458:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:10:58,459:INFO: Epoch 24 out of 100
+2019-03-03 12:12:07,330:INFO: Evaluating on development data
+2019-03-03 12:12:09,948:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17999	388  	346  	810  
+M    	459  	1981 	413  	125  
+E    	377  	343  	18086	737  
+S    	688  	42   	680  	18763
+
+2019-03-03 12:12:09,948:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:12:09,948:INFO: Epoch 25 out of 100
+2019-03-03 12:13:18,796:INFO: Evaluating on development data
+2019-03-03 12:13:21,422:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17816	349  	350  	1028 
+M    	477  	1941 	416  	144  
+E    	337  	340  	17882	984  
+S    	546  	35   	530  	19062
+
+2019-03-03 12:13:21,423:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:13:21,423:INFO: Epoch 26 out of 100
+2019-03-03 12:14:30,491:INFO: Evaluating on development data
+2019-03-03 12:14:33,127:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18052	362  	355  	774  
+M    	487  	1959 	424  	108  
+E    	355  	331  	18143	714  
+S    	700  	49   	679  	18745
+
+2019-03-03 12:14:33,127:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:14:33,127:INFO: Epoch 27 out of 100
+2019-03-03 12:15:42,144:INFO: Evaluating on development data
+2019-03-03 12:15:44,791:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17805	336  	336  	1066 
+M    	488  	1891 	444  	155  
+E    	360  	325  	17856	1002 
+S    	493  	25   	507  	19148
+
+2019-03-03 12:15:44,791:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:15:44,792:INFO: Epoch 28 out of 100
+2019-03-03 12:16:53,933:INFO: Evaluating on development data
+2019-03-03 12:16:56,556:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17941	323  	317  	962  
+M    	474  	1948 	425  	131  
+E    	350  	316  	17995	882  
+S    	528  	46   	554  	19045
+
+2019-03-03 12:16:56,556:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:16:56,557:INFO: Epoch 29 out of 100
+2019-03-03 12:18:05,662:INFO: Evaluating on development data
+2019-03-03 12:18:08,309:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17882	342  	316  	1003 
+M    	500  	1887 	456  	135  
+E    	374  	322  	17942	905  
+S    	518  	32   	555  	19068
+
+2019-03-03 12:18:08,310:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:18:08,310:INFO: Epoch 30 out of 100
+2019-03-03 12:19:17,650:INFO: Evaluating on development data
+2019-03-03 12:19:20,278:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17951	310  	333  	949  
+M    	491  	1906 	436  	145  
+E    	349  	307  	18005	882  
+S    	556  	35   	571  	19011
+
+2019-03-03 12:19:20,278:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:19:20,278:INFO: Epoch 31 out of 100
+2019-03-03 12:20:29,448:INFO: Evaluating on development data
+2019-03-03 12:20:32,075:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17999	341  	309  	894  
+M    	481  	1943 	429  	125  
+E    	328  	339  	18051	825  
+S    	566  	40   	584  	18983
+
+2019-03-03 12:20:32,075:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:20:32,075:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 12:20:32,302:INFO: Epoch 32 out of 100
+2019-03-03 12:21:41,396:INFO: Evaluating on development data
+2019-03-03 12:21:44,031:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18034	347  	323  	839  
+M    	477  	1913 	459  	129  
+E    	356  	330  	18064	793  
+S    	602  	28   	624  	18919
+
+2019-03-03 12:21:44,032:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:21:44,032:INFO: Epoch 33 out of 100
+2019-03-03 12:22:53,227:INFO: Evaluating on development data
+2019-03-03 12:22:55,841:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18017	339  	306  	881  
+M    	476  	1910 	459  	133  
+E    	352  	329  	18038	824  
+S    	564  	36   	604  	18969
+
+2019-03-03 12:22:55,841:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:22:55,842:INFO: Epoch 34 out of 100
+2019-03-03 12:24:04,841:INFO: Evaluating on development data
+2019-03-03 12:24:07,492:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18006	306  	329  	902  
+M    	479  	1919 	452  	128  
+E    	357  	305  	18028	853  
+S    	595  	45   	627  	18906
+
+2019-03-03 12:24:07,492:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:24:07,492:INFO: Epoch 35 out of 100
+2019-03-03 12:25:16,809:INFO: Evaluating on development data
+2019-03-03 12:25:19,439:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18022	341  	353  	827  
+M    	466  	1960 	435  	117  
+E    	365  	329  	18058	791  
+S    	631  	49   	640  	18853
+
+2019-03-03 12:25:19,439:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:25:19,440:INFO: Epoch 36 out of 100
+2019-03-03 12:26:28,254:INFO: Evaluating on development data
+2019-03-03 12:26:30,884:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18025	291  	356  	871  
+M    	518  	1916 	426  	118  
+E    	355  	324  	18077	787  
+S    	610  	38   	641  	18884
+
+2019-03-03 12:26:30,884:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:26:30,885:INFO: Epoch 37 out of 100
+2019-03-03 12:27:39,911:INFO: Evaluating on development data
+2019-03-03 12:27:42,558:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17911	450  	340  	842  
+M    	435  	2036 	392  	115  
+E    	357  	436  	17966	784  
+S    	624  	58   	630  	18861
+
+2019-03-03 12:27:42,558:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:27:42,559:INFO: Epoch 38 out of 100
+2019-03-03 12:28:51,750:INFO: Evaluating on development data
+2019-03-03 12:28:54,378:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17855	330  	340  	1018 
+M    	463  	1895 	465  	155  
+E    	362  	320  	17859	1002 
+S    	512  	44   	529  	19088
+
+2019-03-03 12:28:54,378:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:28:54,378:INFO: Epoch 39 out of 100
+2019-03-03 12:30:03,600:INFO: Evaluating on development data
+2019-03-03 12:30:06,240:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17830	451  	330  	932  
+M    	438  	1991 	426  	123  
+E    	369  	413  	17876	885  
+S    	594  	50   	597  	18932
+
+2019-03-03 12:30:06,240:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:30:06,241:INFO: Epoch 40 out of 100
+2019-03-03 12:31:15,109:INFO: Evaluating on development data
+2019-03-03 12:31:17,737:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17818	359  	296  	1070 
+M    	457  	1938 	442  	141  
+E    	318  	341  	17848	1036 
+S    	517  	35   	526  	19095
+
+2019-03-03 12:31:17,737:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:31:17,737:INFO: Epoch 41 out of 100
+2019-03-03 12:32:26,535:INFO: Evaluating on development data
+2019-03-03 12:32:29,171:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17905	372  	321  	945  
+M    	453  	1969 	416  	140  
+E    	361  	350  	17958	874  
+S    	571  	46   	587  	18969
+
+2019-03-03 12:32:29,171:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:32:29,172:INFO: Epoch 42 out of 100
+2019-03-03 12:33:38,079:INFO: Evaluating on development data
+2019-03-03 12:33:40,733:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17822	396  	320  	1005 
+M    	439  	1991 	401  	147  
+E    	322  	366  	17887	968  
+S    	533  	44   	507  	19089
+
+2019-03-03 12:33:40,734:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:33:40,734:INFO: Epoch 43 out of 100
+2019-03-03 12:34:49,944:INFO: Evaluating on development data
+2019-03-03 12:34:52,582:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18075	351  	315  	802  
+M    	441  	1976 	434  	127  
+E    	375  	324  	18099	745  
+S    	639  	46   	667  	18821
+
+2019-03-03 12:34:52,583:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:34:52,583:INFO: Epoch 44 out of 100
+2019-03-03 12:36:01,919:INFO: Evaluating on development data
+2019-03-03 12:36:04,554:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17882	363  	334  	964  
+M    	458  	1950 	433  	137  
+E    	374  	350  	17911	908  
+S    	533  	44   	559  	19037
+
+2019-03-03 12:36:04,555:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:36:04,555:INFO: Epoch 45 out of 100
+2019-03-03 12:37:13,605:INFO: Evaluating on development data
+2019-03-03 12:37:16,221:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17974	312  	342  	915  
+M    	469  	1896 	467  	146  
+E    	365  	264  	18011	903  
+S    	567  	29   	540  	19037
+
+2019-03-03 12:37:16,222:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:37:16,222:INFO: Epoch 46 out of 100
+2019-03-03 12:38:25,145:INFO: Evaluating on development data
+2019-03-03 12:38:27,772:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18009	328  	357  	849  
+M    	477  	1957 	414  	130  
+E    	376  	315  	18080	772  
+S    	614  	35   	622  	18902
+
+2019-03-03 12:38:27,773:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:38:27,773:INFO: Epoch 47 out of 100
+2019-03-03 12:39:36,721:INFO: Evaluating on development data
+2019-03-03 12:39:39,367:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17830	378  	346  	989  
+M    	440  	2005 	405  	128  
+E    	372  	354  	17884	933  
+S    	559  	37   	562  	19015
+
+2019-03-03 12:39:39,367:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:39:39,367:INFO: Epoch 48 out of 100
+2019-03-03 12:40:48,392:INFO: Evaluating on development data
+2019-03-03 12:40:51,022:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17941	370  	317  	915  
+M    	440  	2018 	403  	117  
+E    	358  	348  	17992	845  
+S    	575  	39   	592  	18967
+
+2019-03-03 12:40:51,022:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:40:51,023:INFO: Epoch 49 out of 100
+2019-03-03 12:42:00,478:INFO: Evaluating on development data
+2019-03-03 12:42:03,120:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17906	357  	389  	891  
+M    	478  	1946 	428  	126  
+E    	362  	355  	17948	878  
+S    	602  	42   	577  	18952
+
+2019-03-03 12:42:03,121:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:42:03,121:INFO: Epoch 50 out of 100
+2019-03-03 12:43:12,256:INFO: Evaluating on development data
+2019-03-03 12:43:14,918:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17860	329  	329  	1025 
+M    	474  	1919 	440  	145  
+E    	346  	335  	17881	981  
+S    	515  	32   	541  	19085
+
+2019-03-03 12:43:14,918:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:43:14,918:INFO: Epoch 51 out of 100
+2019-03-03 12:44:23,996:INFO: Evaluating on development data
+2019-03-03 12:44:26,648:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18045	333  	333  	832  
+M    	466  	1947 	432  	133  
+E    	352  	342  	18067	782  
+S    	611  	48   	640  	18874
+
+2019-03-03 12:44:26,648:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:44:26,648:INFO: Epoch 52 out of 100
+2019-03-03 12:45:35,925:INFO: Evaluating on development data
+2019-03-03 12:45:38,593:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17935	399  	348  	861  
+M    	458  	1979 	422  	119  
+E    	395  	387  	17980	781  
+S    	622  	50   	662  	18839
+
+2019-03-03 12:45:38,593:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:45:38,594:INFO: Epoch 53 out of 100
+2019-03-03 12:46:48,033:INFO: Evaluating on development data
+2019-03-03 12:46:50,688:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17876	338  	315  	1014 
+M    	449  	1954 	433  	142  
+E    	350  	320  	17907	966  
+S    	519  	35   	539  	19080
+
+2019-03-03 12:46:50,688:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:46:50,688:INFO: Epoch 54 out of 100
+2019-03-03 12:48:00,189:INFO: Evaluating on development data
+2019-03-03 12:48:02,828:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17851	347  	335  	1010 
+M    	439  	1964 	427  	148  
+E    	350  	327  	17880	986  
+S    	510  	34   	503  	19126
+
+2019-03-03 12:48:02,829:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:48:02,829:INFO: Epoch 55 out of 100
+2019-03-03 12:49:11,946:INFO: Evaluating on development data
+2019-03-03 12:49:14,598:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17944	315  	324  	960  
+M    	483  	1937 	415  	143  
+E    	358  	310  	18009	866  
+S    	561  	39   	591  	18982
+
+2019-03-03 12:49:14,598:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:49:14,598:INFO: Epoch 56 out of 100
+2019-03-03 12:50:23,955:INFO: Evaluating on development data
+2019-03-03 12:50:26,615:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18004	336  	363  	840  
+M    	448  	1966 	431  	133  
+E    	380  	340  	18010	813  
+S    	608  	38   	632  	18895
+
+2019-03-03 12:50:26,615:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:50:26,616:INFO: Epoch 57 out of 100
+2019-03-03 12:51:35,739:INFO: Evaluating on development data
+2019-03-03 12:51:38,384:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18007	320  	326  	890  
+M    	454  	1961 	442  	121  
+E    	348  	299  	18037	859  
+S    	597  	27   	596  	18953
+
+2019-03-03 12:51:38,385:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:51:38,385:INFO: Epoch 58 out of 100
+2019-03-03 12:52:47,710:INFO: Evaluating on development data
+2019-03-03 12:52:50,356:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17745	426  	337  	1035 
+M    	455  	1972 	394  	157  
+E    	354  	406  	17818	965  
+S    	519  	43   	517  	19094
+
+2019-03-03 12:52:50,356:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:52:50,356:INFO: Epoch 59 out of 100
+2019-03-03 12:53:59,504:INFO: Evaluating on development data
+2019-03-03 12:54:02,168:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17893	344  	354  	952  
+M    	451  	1950 	435  	142  
+E    	385  	316  	17930	912  
+S    	575  	29   	579  	18990
+
+2019-03-03 12:54:02,169:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 12:54:02,169:INFO: Epoch 60 out of 100
+2019-03-03 12:55:11,254:INFO: Evaluating on development data
+2019-03-03 12:55:13,921:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17948	294  	304  	997  
+M    	469  	1922 	467  	120  
+E    	355  	290  	17948	950  
+S    	533  	32   	582  	19026
+
+2019-03-03 12:55:13,921:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:55:13,921:INFO: Epoch 61 out of 100
+2019-03-03 12:56:23,015:INFO: Evaluating on development data
+2019-03-03 12:56:25,689:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17791	332  	358  	1062 
+M    	452  	1920 	458  	148  
+E    	380  	321  	17791	1051 
+S    	524  	36   	537  	19076
+
+2019-03-03 12:56:25,690:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:56:25,690:INFO: Epoch 62 out of 100
+2019-03-03 12:57:35,007:INFO: Evaluating on development data
+2019-03-03 12:57:37,651:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17828	337  	332  	1046 
+M    	466  	1917 	450  	145  
+E    	358  	314  	17863	1008 
+S    	534  	31   	537  	19071
+
+2019-03-03 12:57:37,652:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 12:57:37,652:INFO: Epoch 63 out of 100
+2019-03-03 12:58:46,558:INFO: Evaluating on development data
+2019-03-03 12:58:49,190:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18077	324  	349  	793  
+M    	465  	1942 	450  	121  
+E    	356  	320  	18092	775  
+S    	658  	33   	663  	18819
+
+2019-03-03 12:58:49,190:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 12:58:49,190:INFO: Epoch 64 out of 100
+2019-03-03 12:59:58,044:INFO: Evaluating on development data
+2019-03-03 13:00:00,661:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18019	306  	362  	856  
+M    	464  	1923 	465  	126  
+E    	346  	298  	18021	878  
+S    	634  	34   	609  	18896
+
+2019-03-03 13:00:00,661:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:00:00,661:INFO: Epoch 65 out of 100
+2019-03-03 13:01:09,450:INFO: Evaluating on development data
+2019-03-03 13:01:12,100:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17814	415  	326  	988  
+M    	426  	2011 	415  	126  
+E    	355  	393  	17842	953  
+S    	542  	49   	548  	19034
+
+2019-03-03 13:01:12,100:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:01:12,100:INFO: Epoch 66 out of 100
+2019-03-03 13:02:21,437:INFO: Evaluating on development data
+2019-03-03 13:02:24,070:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17927	337  	357  	922  
+M    	454  	1929 	470  	125  
+E    	359  	299  	17941	944  
+S    	571  	38   	533  	19031
+
+2019-03-03 13:02:24,070:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:02:24,070:INFO: Epoch 67 out of 100
+2019-03-03 13:03:33,315:INFO: Evaluating on development data
+2019-03-03 13:03:35,941:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18087	281  	348  	827  
+M    	508  	1899 	456  	115  
+E    	341  	295  	18117	790  
+S    	620  	37   	630  	18886
+
+2019-03-03 13:03:35,942:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:03:35,942:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 13:03:36,166:INFO: Epoch 68 out of 100
+2019-03-03 13:04:45,115:INFO: Evaluating on development data
+2019-03-03 13:04:47,761:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17943	335  	329  	936  
+M    	428  	1980 	437  	133  
+E    	343  	339  	17925	936  
+S    	538  	32   	560  	19043
+
+2019-03-03 13:04:47,761:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:04:47,761:INFO: Epoch 69 out of 100
+2019-03-03 13:05:57,207:INFO: Evaluating on development data
+2019-03-03 13:05:59,831:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17895	360  	328  	960  
+M    	454  	1974 	424  	126  
+E    	358  	323  	17955	907  
+S    	578  	35   	569  	18991
+
+2019-03-03 13:05:59,831:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:05:59,832:INFO: Epoch 70 out of 100
+2019-03-03 13:07:09,482:INFO: Evaluating on development data
+2019-03-03 13:07:12,168:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17892	421  	338  	892  
+M    	435  	2014 	412  	117  
+E    	375  	393  	17940	835  
+S    	609  	70   	623  	18871
+
+2019-03-03 13:07:12,168:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:07:12,169:INFO: Epoch 71 out of 100
+2019-03-03 13:08:21,524:INFO: Evaluating on development data
+2019-03-03 13:08:24,179:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17920	372  	327  	924  
+M    	426  	1984 	428  	140  
+E    	357  	341  	17947	898  
+S    	604  	44   	604  	18921
+
+2019-03-03 13:08:24,180:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:08:24,180:INFO: Epoch 72 out of 100
+2019-03-03 13:09:33,704:INFO: Evaluating on development data
+2019-03-03 13:09:36,384:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18107	289  	332  	815  
+M    	473  	1901 	493  	111  
+E    	364  	265  	18106	808  
+S    	596  	34   	604  	18939
+
+2019-03-03 13:09:36,385:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:09:36,385:INFO: New best score! Saving model in results/tcn/20190303_114309/model.weights
+2019-03-03 13:09:36,612:INFO: Epoch 73 out of 100
+2019-03-03 13:10:46,100:INFO: Evaluating on development data
+2019-03-03 13:10:48,786:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17837	373  	351  	982  
+M    	454  	1980 	412  	132  
+E    	367  	360  	17880	936  
+S    	562  	55   	566  	18990
+
+2019-03-03 13:10:48,786:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:10:48,787:INFO: Epoch 74 out of 100
+2019-03-03 13:11:57,911:INFO: Evaluating on development data
+2019-03-03 13:12:00,565:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18003	350  	346  	844  
+M    	451  	1971 	433  	123  
+E    	359  	336  	18029	819  
+S    	625  	51   	623  	18874
+
+2019-03-03 13:12:00,565:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:12:00,565:INFO: Epoch 75 out of 100
+2019-03-03 13:13:09,782:INFO: Evaluating on development data
+2019-03-03 13:13:12,429:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18012	321  	349  	861  
+M    	486  	1914 	461  	117  
+E    	364  	322  	18032	825  
+S    	609  	41   	627  	18896
+
+2019-03-03 13:13:12,429:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:13:12,430:INFO: Epoch 76 out of 100
+2019-03-03 13:14:21,867:INFO: Evaluating on development data
+2019-03-03 13:14:24,512:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18014	375  	360  	794  
+M    	457  	1989 	417  	115  
+E    	348  	362  	18059	774  
+S    	704  	52   	681  	18736
+
+2019-03-03 13:14:24,512:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:14:24,512:INFO: Epoch 77 out of 100
+2019-03-03 13:15:34,004:INFO: Evaluating on development data
+2019-03-03 13:15:36,654:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17943	355  	312  	933  
+M    	446  	1975 	426  	131  
+E    	368  	332  	17980	863  
+S    	556  	49   	591  	18977
+
+2019-03-03 13:15:36,654:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:15:36,654:INFO: Epoch 78 out of 100
+2019-03-03 13:16:46,172:INFO: Evaluating on development data
+2019-03-03 13:16:48,820:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18010	369  	338  	826  
+M    	439  	1981 	435  	123  
+E    	364  	335  	18040	804  
+S    	671  	39   	660  	18803
+
+2019-03-03 13:16:48,821:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:16:48,821:INFO: Epoch 79 out of 100
+2019-03-03 13:17:58,240:INFO: Evaluating on development data
+2019-03-03 13:18:00,899:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18040	323  	322  	858  
+M    	480  	1937 	455  	106  
+E    	365  	311  	18076	791  
+S    	600  	45   	633  	18895
+
+2019-03-03 13:18:00,899:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:18:00,899:INFO: Epoch 80 out of 100
+2019-03-03 13:19:10,207:INFO: Evaluating on development data
+2019-03-03 13:19:12,870:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17844	340  	317  	1042 
+M    	453  	1925 	443  	157  
+E    	368  	324  	17862	989  
+S    	519  	30   	556  	19068
+
+2019-03-03 13:19:12,870:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 13:19:12,871:INFO: Epoch 81 out of 100
+2019-03-03 13:20:22,278:INFO: Evaluating on development data
+2019-03-03 13:20:24,956:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17877	350  	345  	971  
+M    	455  	1929 	461  	133  
+E    	366  	336  	17881	960  
+S    	576  	61   	584  	18952
+
+2019-03-03 13:20:24,956:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:20:24,956:INFO: Epoch 82 out of 100
+2019-03-03 13:21:34,660:INFO: Evaluating on development data
+2019-03-03 13:21:37,243:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17861	352  	326  	1004 
+M    	435  	1967 	437  	139  
+E    	361  	341  	17865	976  
+S    	525  	55   	550  	19043
+
+2019-03-03 13:21:37,243:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:21:37,243:INFO: Epoch 83 out of 100
+2019-03-03 13:22:48,214:INFO: Evaluating on development data
+2019-03-03 13:22:50,875:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17984	329  	328  	902  
+M    	462  	1944 	448  	124  
+E    	348  	300  	18024	871  
+S    	584  	40   	578  	18971
+
+2019-03-03 13:22:50,875:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:22:50,876:INFO: Epoch 84 out of 100
+2019-03-03 13:24:00,322:INFO: Evaluating on development data
+2019-03-03 13:24:02,975:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17855	327  	348  	1013 
+M    	495  	1889 	455  	139  
+E    	350  	304  	17915	974  
+S    	575  	31   	555  	19012
+
+2019-03-03 13:24:02,975:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 13:24:02,975:INFO: Epoch 85 out of 100
+2019-03-03 13:25:12,686:INFO: Evaluating on development data
+2019-03-03 13:25:15,361:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17928	341  	347  	927  
+M    	454  	1923 	457  	144  
+E    	326  	324  	17938	955  
+S    	600  	42   	563  	18968
+
+2019-03-03 13:25:15,361:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:25:15,361:INFO: Epoch 86 out of 100
+2019-03-03 13:26:24,679:INFO: Evaluating on development data
+2019-03-03 13:26:27,340:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17935	337  	330  	941  
+M    	456  	1963 	426  	133  
+E    	374  	312  	17983	874  
+S    	568  	40   	589  	18976
+
+2019-03-03 13:26:27,341:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:26:27,341:INFO: Epoch 87 out of 100
+2019-03-03 13:27:36,852:INFO: Evaluating on development data
+2019-03-03 13:27:39,513:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17822	386  	327  	1008 
+M    	450  	1971 	423  	134  
+E    	333  	385  	17845	980  
+S    	535  	52   	541  	19045
+
+2019-03-03 13:27:39,514:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:27:39,514:INFO: Epoch 88 out of 100
+2019-03-03 13:28:48,867:INFO: Evaluating on development data
+2019-03-03 13:28:51,492:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17761	392  	345  	1045 
+M    	436  	1978 	409  	155  
+E    	374  	390  	17780	999  
+S    	550  	60   	579  	18984
+
+2019-03-03 13:28:51,492:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 13:28:51,492:INFO: Epoch 89 out of 100
+2019-03-03 13:30:00,824:INFO: Evaluating on development data
+2019-03-03 13:30:03,491:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17995	360  	328  	860  
+M    	441  	1996 	406  	135  
+E    	348  	368  	18017	810  
+S    	610  	65   	635  	18863
+
+2019-03-03 13:30:03,491:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:30:03,491:INFO: Epoch 90 out of 100
+2019-03-03 13:31:12,892:INFO: Evaluating on development data
+2019-03-03 13:31:15,566:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17882	392  	333  	936  
+M    	432  	1977 	444  	125  
+E    	361  	375  	17883	924  
+S    	560  	54   	569  	18990
+
+2019-03-03 13:31:15,566:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:31:15,566:INFO: Epoch 91 out of 100
+2019-03-03 13:32:24,804:INFO: Evaluating on development data
+2019-03-03 13:32:27,447:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17988	341  	340  	874  
+M    	451  	1973 	435  	119  
+E    	385  	323  	18018	817  
+S    	614  	47   	643  	18869
+
+2019-03-03 13:32:27,447:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:32:27,447:INFO: Epoch 92 out of 100
+2019-03-03 13:33:36,535:INFO: Evaluating on development data
+2019-03-03 13:33:39,186:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17990	331  	340  	882  
+M    	472  	1920 	457  	129  
+E    	343  	326  	18005	869  
+S    	615  	45   	612  	18901
+
+2019-03-03 13:33:39,186:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:33:39,186:INFO: Epoch 93 out of 100
+2019-03-03 13:34:48,440:INFO: Evaluating on development data
+2019-03-03 13:34:51,100:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17885	369  	357  	932  
+M    	439  	1946 	454  	139  
+E    	389  	310  	17922	922  
+S    	585  	52   	566  	18970
+
+2019-03-03 13:34:51,100:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:34:51,100:INFO: Epoch 94 out of 100
+2019-03-03 13:36:00,306:INFO: Evaluating on development data
+2019-03-03 13:36:02,964:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17911	316  	323  	993  
+M    	484  	1881 	466  	147  
+E    	346  	304  	17937	956  
+S    	553  	43   	568  	19009
+
+2019-03-03 13:36:02,964:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:36:02,964:INFO: Epoch 95 out of 100
+2019-03-03 13:37:12,194:INFO: Evaluating on development data
+2019-03-03 13:37:14,861:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18013	335  	359  	836  
+M    	445  	1968 	440  	125  
+E    	360  	350  	17996	837  
+S    	634  	49   	651  	18839
+
+2019-03-03 13:37:14,862:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:37:14,862:INFO: Epoch 96 out of 100
+2019-03-03 13:38:24,260:INFO: Evaluating on development data
+2019-03-03 13:38:26,930:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17960	309  	354  	920  
+M    	491  	1890 	458  	139  
+E    	332  	333  	17967	911  
+S    	570  	33   	571  	18999
+
+2019-03-03 13:38:26,931:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:38:26,931:INFO: Epoch 97 out of 100
+2019-03-03 13:39:36,109:INFO: Evaluating on development data
+2019-03-03 13:39:38,762:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17855	366  	381  	941  
+M    	466  	1942 	432  	138  
+E    	377  	374  	17874	918  
+S    	595  	52   	602  	18924
+
+2019-03-03 13:39:38,763:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:39:38,763:INFO: Epoch 98 out of 100
+2019-03-03 13:40:47,949:INFO: Evaluating on development data
+2019-03-03 13:40:50,597:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17857	378  	341  	967  
+M    	450  	1966 	440  	122  
+E    	347  	384  	17855	957  
+S    	564  	53   	580  	18976
+
+2019-03-03 13:40:50,597:INFO: Entity level P/R/F1: 0.90/0.91/0.90
+2019-03-03 13:40:50,598:INFO: Epoch 99 out of 100
+2019-03-03 13:41:59,900:INFO: Evaluating on development data
+2019-03-03 13:42:02,541:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	18019	293  	353  	878  
+M    	455  	1972 	435  	116  
+E    	350  	327  	17997	869  
+S    	590  	43   	622  	18918
+
+2019-03-03 13:42:02,541:INFO: Entity level P/R/F1: 0.90/0.91/0.91
+2019-03-03 13:42:02,542:INFO: Epoch 100 out of 100
+2019-03-03 13:43:11,806:INFO: Evaluating on development data
+2019-03-03 13:43:14,465:DEBUG: Token-level confusion matrix:
+go\gu	B    	M    	E    	S    
+B    	17882	322  	363  	976  
+M    	470  	1906 	477  	125  
+E    	361  	324  	17863	995  
+S    	593  	50   	597  	18933
+
+2019-03-03 13:43:14,465:INFO: Entity level P/R/F1: 0.89/0.91/0.90
+2019-03-03 13:43:14,482:INFO: Each epoch F1 score is:
+
+2019-03-03 13:43:14,483:INFO: Each epoch loss value is:
+
+2019-03-03 13:43:14,484:INFO: Best F1 score is 0.9088
+2019-03-03 13:43:15,099:INFO: Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image
+2019-03-03 13:43:15,319:DEBUG: findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/home/john/anaconda3/envs/cs231n/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000

@@ -13,7 +13,7 @@ class Config:
     max_length = 2000 # longest sequence to parse     
     n_classes = 4 # name entity number  
     batch_size = 32
-    n_epochs = 30
+    n_epochs = 100
     lr = 0.001 # learn rate
     LABELS = ['B', 'M', 'E', 'S'] # Label Strategy
     UNK = "<unk>" # Unknown character

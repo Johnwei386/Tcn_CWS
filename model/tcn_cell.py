@@ -17,9 +17,9 @@ class TemporalBlock(tf.keras.layers.Layer):
         self.n_outputs = n_outputs
         self.dropout = dropout
         padding_size = (kernel_size - 1) * dilation_rate
-        # the future scope scheme
+        # the Future scope scheme
         self.padding = tf.constant([[0, 0], [0, padding_size], [0, 0]]) # padding after the last word of sentence
-        # the past scope scheme
+        # the Past scope scheme
         #self.padding = tf.constant([[0, 0], [padding_size, 0], [0, 0]])
         self.conv1 = tf.layers.Conv1D(n_outputs, 
                                       kernel_size, 
